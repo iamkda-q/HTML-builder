@@ -54,7 +54,11 @@ const bundleCss = async (dirPath = 'styles') => {
   });
 };
 
-checkProjectPath();
-getHtml();
-copyAssets();
-bundleCss();
+const getProjectDist = async () => {
+    await checkProjectPath();
+    getHtml();
+    copyAssets();
+    bundleCss();
+};
+
+getProjectDist();
